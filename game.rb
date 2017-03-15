@@ -11,7 +11,7 @@ class Game
   def take_turn(players)
     for player in @players
       player.move_position(@dice)
-      player.position.ladders
+      players.ladders
       print player.position
     end
 
