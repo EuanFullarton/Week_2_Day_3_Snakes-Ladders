@@ -1,9 +1,10 @@
 class Board
 
 
-  def initialize(no_of_squares, ladders, position)
+  def initialize(no_of_squares, ladders, snakes, position)
     @no_of_squares = no_of_squares
     @ladders = ladders
+    @snakes = snakes
     @position = position 
   end
 
@@ -15,6 +16,16 @@ class Board
     for ladder in @ladders
       if ladder[0] == @position
         @position = ladder[1]
+        return @position
+      end
+    end
+    return @position
+  end
+
+  def snakes
+    for snake in @snakes
+      if snake[0] == @position
+        @position = snake[1]
         return @position
       end
     end

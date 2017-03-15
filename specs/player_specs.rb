@@ -11,6 +11,7 @@ class TestPlayer < MiniTest::Test
     @player1 = Player.new("James", 100)
     @player2 = Player.new("Euan", 20)
     @player3 = Player.new("Ralf", 45)
+    @players = [@player1, @player2, @player3]
   end
 
   def test_move_position
